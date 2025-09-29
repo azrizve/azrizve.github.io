@@ -67,7 +67,7 @@
       border-radius: 50%;
     }
 
-    .flip-front, .flip-back {
+    .flip-front{
       position: absolute;
       width: 100%;
       height: 100%;
@@ -75,11 +75,19 @@
       border-radius: 50%;
     }
 
-    .flip-front img, .flip-back img {
+    .flip-front img{
       width: 100%;
       height: 100%;
       object-fit: cover;
       border-radius: 50%;
+      border: 4px solid #212529;
+    }
+
+    .flip-back img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%; /* Ensures it’s circular */
       border: 4px solid #212529;
     }
 
@@ -257,39 +265,17 @@
         </div>
       </div>
 
-<!-- Research Interests -->
-<div class="col-md-6">
-  <h4 class="section-title">🔬 Research Interests</h4>
-  
-  <div class="row g-3">
-    <div class="col-12">
-      <div class="card exp-card p-3">
-        Next-Generation Communication Systems
+      <!-- Research Interests -->
+      <div class="col-md-6">
+        <h4 class="section-title">🔬 Research Interests</h4>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Next-Generation Communication Systems</li>
+          <li class="list-group-item">Unmanned Aerial Vehicles (UAV)</li>
+          <li class="list-group-item">Vehicle-to-Vehicle (V2V) Communication</li>
+          <li class="list-group-item">Communication Security</li>
+          <li class="list-group-item">Physical & Cross-Layer Security</li>
+        </ul>
       </div>
-    </div>
-    <div class="col-12">
-      <div class="card exp-card p-3">
-        Unmanned Aerial Vehicles (UAV)
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="card exp-card p-3">
-        Vehicle-to-Vehicle (V2V) Communication
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="card exp-card p-3">
-        Communication Security
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="card exp-card p-3">
-        Physical & Cross-Layer Security
-      </div>
-    </div>
-  </div>
-</div>
-
     </div>
   </div>
 
