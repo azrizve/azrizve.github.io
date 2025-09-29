@@ -43,7 +43,9 @@ body.loaded {
 .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.75); /* slightly faded by default */
   position: relative; /* required for underline */
+  display: inline-block; /* make width fit text only */
   transition: color 0.3s ease;
+  padding: 0.5rem 0; /* optional for spacing */
 }
 
 /* Hover: text turns white */
@@ -52,12 +54,12 @@ body.loaded {
   color: #ffffff !important;
 }
 
-/* Underline effect */
+/* Underline effect only under text */
 .navbar-nav .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px; /* adjust distance from text */
+  bottom: 0; /* directly under text */
   width: 0;
   height: 2px;
   background-color: #ffffff;
@@ -69,6 +71,7 @@ body.loaded {
 .navbar-nav .nav-link:focus::after {
   width: 100%;
 }
+
 
 </style>
 
