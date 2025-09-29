@@ -158,6 +158,12 @@ body.loaded {
 
   <!-- Custom JS for Hover Dropdown -->
   <script>
+  
+  // Add 'loaded' class to body when page fully loads
+  window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+  });
+    
     document.addEventListener("DOMContentLoaded", function () {
       const dropdown = document.querySelector(".nav-item.dropdown");
       const dropdownMenu = dropdown.querySelector(".dropdown-menu");
