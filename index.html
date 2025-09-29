@@ -4,153 +4,152 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Home</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Navbar */
+    header {
+      background: #0d1b2a;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #00b4d8;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background: #1b263b;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      min-width: 150px;
+    }
+
+    .dropdown-menu li a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: #fff;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Banner */
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Two Column Section */
+    .home-section {
+      padding: 2rem;
+    }
+
+    .home-container {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .left-column img {
+      width: 250px;
+      border-radius: 10px;
+    }
+
+    .right-column {
+      max-width: 600px;
+    }
+
+    .right-column h2 {
+      margin-bottom: 1rem;
+      color: #1b263b;
+    }
+
+    .right-column p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0d1b2a;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .home-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .left-column img {
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
 </head>
-<style>
-  /* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Navbar */
-header {
-  background: #0d1b2a;
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.nav-links li a:hover {
-  color: #00b4d8;
-}
-
-/* Dropdown */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background: #1b263b;
-  top: 100%;
-  left: 0;
-  list-style: none;
-  min-width: 150px;
-}
-
-.dropdown-menu li a {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: #fff;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Banner */
-.banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Two Column Section */
-.home-section {
-  padding: 2rem;
-}
-
-.home-container {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-.left-column img {
-  width: 250px;
-  border-radius: 10px;
-}
-
-.right-column {
-  max-width: 600px;
-}
-
-.right-column h2 {
-  margin-bottom: 1rem;
-  color: #1b263b;
-}
-
-.right-column p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #0d1b2a;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    padding: 1rem;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .home-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .left-column img {
-    margin-bottom: 1rem;
-  }
-}
-</style>
 <body>
 
   <!-- Navigation Bar -->
@@ -166,12 +165,10 @@ header {
         <li class="dropdown">
           <a href="#">Projects ▼</a>
           <ul class="dropdown-menu">
-            <li><a href="#">Project 1</a></li>
-            <li><a href="#">Project 2</a></li>
+            <li><a href="#">Insights</a></li>
+            <li><a href="#">Academic Services</a></li>
           </ul>
         </li>
-        <li><a href="#">Insights</a></li>
-        <li><a href="#">Academic Services</a></li>
         <li><a href="#">Contacts</a></li>
       </ul>
       <div class="menu-toggle" id="menuToggle">☰</div>
@@ -204,15 +201,14 @@ header {
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
-<script>
-  // Mobile Menu Toggle
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-</script>
