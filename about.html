@@ -20,23 +20,10 @@
     }
 
     .section-title {
-      position: relative;
       font-weight: bold;
-      margin-bottom: 30px;
-      padding-left: 20px;
-      display: inline-block;
-      font-size: 1.5rem;
-    }
-    
-    .section-title::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 10px;          /* Ribbon width */
-      background-color: #000; /* Black color */
-      border-radius: 2px;     /* Slightly rounded edges for modern look */
+      margin-bottom: 20px;
+      border-left: 5px solid #0d6efd;
+      padding-left: 10px;
     }
 
     .profile-card {
@@ -54,13 +41,6 @@
       border-radius: 50%;
       border: 4px solid #0d6efd;
       margin-bottom: 15px;
-    }
-
-    .exp-card {
-      background: #fff;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-      border: none;
-      margin-bottom: 20px;
     }
 
     footer {
@@ -111,113 +91,43 @@
           <h3 class="mt-2">Asif Zaman Rizve</h3>
           <p class="text-muted">Lecturer, Department of Electrical & Electronic Engineering<br>
           Rajshahi University of Engineering & Technology (RUET), Bangladesh</p>
-          <p>I am currently serving as a Lecturer in the Department of Electrical & Electronic Engineering at Rajshahi University of Engineering & Technology (RUET), where my academic journey began with a Bachelor of Science in Electrical & Electronic Engineering. I am a prospective graduate student with a strong passion for advancing next-generation communication systems, UAV technologies, V2V communication, communication security, as well as physical and cross-layer security.</p>
+          <p>I am serving as a Lecturer in the Department of Electrical & Electronic Engineering at RUET. 
+          My academic journey began here, where I completed my Bachelor of Science in Electrical & Electronic Engineering. 
+          My passion lies in advancing next-generation communication systems, radar technologies, and firmware engineering.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Professional Experience -->
-  <div class="container my-5">
-    <h4 class="section-title">💼 Professional Experience</h4>
-
-    <!-- RUET Experience -->
-    <div class="card exp-card">
-      <div class="row g-0 align-items-center">
-        <div class="col-md-3 text-center p-3">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/87/RUET_logo.svg/1038px-RUET_logo.svg.png" 
-               alt="RUET Logo" class="img-fluid" style="max-width: 150px;">
-        </div>
-        <div class="col-md-9">
-          <div class="card-body">
-            <h5 class="card-title">Lecturer</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Department of Electrical & Electronic Engineering, RUET</h6>
-            <p class="card-text">Course Teaching:</p>
-            <ul>
-              <li>VLSI</li>
-              <li>Radar and Satellite Communication</li>
-              <li>Digital Communication</li>
-              <li>Electronic Shop Practice</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- BUBT Experience -->
-    <div class="card exp-card">
-      <div class="row g-0 align-items-center">
-        <div class="col-md-3 text-center p-3">
-          <img src="https://www.cse.bubt.edu.bd/static/images/logo/bubt.png" 
-               alt="BUBT Logo" class="img-fluid" style="max-width: 150px;">
-        </div>
-        <div class="col-md-9">
-          <div class="card-body">
-            <h5 class="card-title">Lecturer</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Department of Electrical & Electronic Engineering, BUBT</h6>
-            <p class="card-text">Course Teaching:</p>
-            <ul>
-              <li>VLSI</li>
-              <li>Radar and Satellite Communication</li>
-              <li>Digital Communication</li>
-              <li>Electronic Shop Practice</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Web Developer Experience -->
-    <div class="card exp-card">
-      <div class="row g-0 align-items-center">
-        <div class="col-md-3 text-center p-3">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Green_Climate_Fund.svg/1024px-Green_Climate_Fund.svg.png" 
-               alt="GCF Logo" class="img-fluid" style="max-width: 150px;">
-        </div>
-        <div class="col-md-9">
-          <div class="card-body">
-            <h5 class="card-title">Web Developer</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Climate Resilient Infrastructure Mainstream Project (CRIMP), LGED</h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> 
-
   <!-- Education & Research Interests -->
   <div class="container my-5">
     <div class="row g-5">
-      <!-- Education Card -->
       <div class="col-md-6">
         <h4 class="section-title">🎓 Education</h4>
-        <div class="card exp-card p-3">
-          <div class="row g-0 align-items-center">
-            <div class="col-md-3 text-center p-2">
-              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/87/RUET_logo.svg/1038px-RUET_logo.svg.png" 
-                   alt="RUET Logo" class="img-fluid" style="max-width: 100px;">
-            </div>
-            <div class="col-md-9">
-              <div class="card-body p-0">
-                <strong>B.Sc. in Electrical & Electronic Engineering</strong>
-                <br>Rajshahi University of Engineering & Technology (RUET), Bangladesh
-                <br>2018 - 2023
-                <br>CGPA: 3.93 out of 4.00 (First Class First with Honors)
-              </div>
-            </div>
-          </div>
-        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>B.Sc. in Electrical & Electronic Engineering</strong><br>Rajshahi University of Engineering & Technology (RUET), Bangladesh</li>
+        </ul>
       </div>
-
-      <!-- Research Interests -->
       <div class="col-md-6">
         <h4 class="section-title">🔬 Research Interests</h4>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Next-Generation Communication Systems</li>
-          <li class="list-group-item">Unmanned Aerial Vehicles (UAV)</li>
-          <li class="list-group-item">Vehicle-to-Vehicle (V2V) Communication</li>
-          <li class="list-group-item">Communication Security</li>
-          <li class="list-group-item">Physical & Cross-Layer Security</li>
+          <li class="list-group-item">Next-Generation Wireless Networks</li>
+          <li class="list-group-item">Radar Systems & Signal Processing</li>
+          <li class="list-group-item">Firmware Engineering & Embedded Systems</li>
+          <li class="list-group-item">Physical Layer Security in Communication</li>
         </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <div class="container my-5">
+    <h4 class="section-title">💼 Professional Experience</h4>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Lecturer</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Department of Electrical & Electronic Engineering, RUET</h6>
+        <p class="card-text">Teaching undergraduate courses and supervising laboratory sessions on Communication Systems, Digital Circuit Design, and Radar Engineering. Engaged in research on firmware engineering and advanced wireless systems.</p>
       </div>
     </div>
   </div>
@@ -228,6 +138,7 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
   <script>
     window.addEventListener('load', () => {
       document.body.classList.add('loaded');
