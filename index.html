@@ -22,8 +22,8 @@ body.loaded {
   
   /* Background section */
   .hero-section {
-    height: 50vh;
-    background: url('https://azrizve.github.io/images/background/background_AZR_2.jpeg') no-repeat center center/cover;
+    height: 40vh;
+    background: url('https://azrizve.github.io/images/background/background_AZR.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,6 +72,13 @@ body.loaded {
   width: 100%;
 }
 
+.carousel-inner img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* always square */
+  object-fit: cover;
+  border-radius: 10px; /* optional */
+}
+  
 /* Footer styling */
 footer {
   background-color: #212529; /* same as navbar-dark bg-dark */
