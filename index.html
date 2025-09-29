@@ -5,20 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Home</title>
   <style>
-    /* Reset */
+    /* ===== Reset ===== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    /* Navbar */
+    body {
+      background: #f4f7f8;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== Navbar ===== */
     header {
       background: #0d1b2a;
       color: #fff;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
     .navbar {
@@ -29,8 +41,10 @@
     }
 
     .logo {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       font-weight: bold;
+      letter-spacing: 1px;
+      color: #00b4d8;
     }
 
     .nav-links {
@@ -40,17 +54,17 @@
     }
 
     .nav-links li a {
-      text-decoration: none;
-      color: #fff;
       font-weight: 500;
+      padding: 0.5rem 0.8rem;
+      border-radius: 5px;
       transition: 0.3s;
     }
 
     .nav-links li a:hover {
-      color: #00b4d8;
+      background: #00b4d8;
+      color: #fff;
     }
 
-    /* Dropdown */
     .dropdown {
       position: relative;
     }
@@ -62,12 +76,15 @@
       top: 100%;
       left: 0;
       list-style: none;
-      min-width: 150px;
+      min-width: 160px;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
     .dropdown-menu li a {
       display: block;
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1rem;
       color: #fff;
     }
 
@@ -77,48 +94,97 @@
 
     .menu-toggle {
       display: none;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       cursor: pointer;
     }
 
-    /* Banner */
-    .banner img {
+    /* ===== Banner ===== */
+    .banner {
+      position: relative;
       width: 100%;
-      height: auto;
-      display: block;
+      height: 400px;
+      overflow: hidden;
     }
 
-    /* Two Column Section */
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+    }
+
+    .banner-text h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 2px;
+    }
+
+    .banner-text p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    /* ===== Home Section ===== */
     .home-section {
-      padding: 2rem;
+      padding: 4rem 2rem;
+      display: flex;
+      justify-content: center;
     }
 
     .home-container {
       display: flex;
-      gap: 2rem;
+      gap: 3rem;
       align-items: center;
+      max-width: 1100px;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
     .left-column img {
-      width: 250px;
-      border-radius: 10px;
+      width: 300px;
+      border-radius: 15px;
+      transition: transform 0.3s;
     }
 
-    .right-column {
-      max-width: 600px;
+    .left-column img:hover {
+      transform: scale(1.05);
     }
 
     .right-column h2 {
+      font-size: 2rem;
       margin-bottom: 1rem;
-      color: #1b263b;
+      color: #0d1b2a;
     }
 
     .right-column p {
       margin-bottom: 1rem;
       line-height: 1.6;
+      color: #555;
     }
 
-    /* Responsive */
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .home-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .left-column img {
+        margin-bottom: 1.5rem;
+      }
+    }
+
     @media (max-width: 768px) {
       .nav-links {
         display: none;
@@ -127,8 +193,9 @@
         position: absolute;
         top: 60px;
         right: 0;
-        width: 200px;
+        width: 220px;
         padding: 1rem;
+        border-radius: 0 0 10px 10px;
       }
 
       .nav-links.active {
@@ -138,15 +205,6 @@
       .menu-toggle {
         display: block;
       }
-
-      .home-container {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .left-column img {
-        margin-bottom: 1rem;
-      }
     }
   </style>
 </head>
@@ -155,7 +213,7 @@
   <!-- Navigation Bar -->
   <header>
     <nav class="navbar">
-      <div class="logo">My Portfolio</div>
+      <div class="logo">MyPortfolio</div>
       <ul class="nav-links" id="navLinks">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
@@ -178,25 +236,23 @@
   <!-- Banner Section -->
   <section class="banner">
     <img src="https://via.placeholder.com/1500x400" alt="Banner Image">
+    <div class="banner-text">
+      <h1>Hello, I'm Your Name</h1>
+      <p>Researcher | Engineer | Innovator</p>
+    </div>
   </section>
 
-  <!-- About Section (Two Columns) -->
+  <!-- Home Section (Two Columns) -->
   <section class="home-section">
     <div class="home-container">
       <div class="left-column">
-        <img src="https://via.placeholder.com/250" alt="Profile Image">
+        <img src="https://via.placeholder.com/300" alt="Profile Image">
       </div>
       <div class="right-column">
         <h2>Welcome to My Portfolio</h2>
-        <p>
-          Hello! I’m <strong>Your Name</strong>, a passionate researcher and engineer.  
-          This is my personal website where you’ll find details about my work, 
-          projects, publications, and achievements.
-        </p>
-        <p>
-          Explore my skills, insights, and academic contributions in the navigation bar above.  
-          Feel free to reach out through the contact section!
-        </p>
+        <p>Hello! I’m <strong>Your Name</strong>, a passionate researcher and engineer.  
+          This website showcases my projects, publications, skills, and achievements.</p>
+        <p>Explore my work and insights through the navigation menu. Feel free to contact me for collaborations or academic services.</p>
       </div>
     </div>
   </section>
