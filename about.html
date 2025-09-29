@@ -57,10 +57,30 @@
     }
 
     .exp-card {
+      position: relative;
       background: #fff;
       box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
       border: none;
-      margin-bottom: 20px;
+      margin-bottom: 40px; /* extra space for ribbon */
+      padding: 20px;
+    }
+    
+    /* Ribbon below the card */
+    .exp-card::after {
+      content: "Professional Experience"; /* The text for the ribbon */
+      position: absolute;
+      bottom: -15px; /* place below the card */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #000; /* Black ribbon */
+      color: #fff;
+      font-weight: bold;
+      padding: 5px 20px;
+      font-size: 0.9rem;
+      border-radius: 3px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+      z-index: 10;
+      white-space: nowrap;
     }
 
     footer {
